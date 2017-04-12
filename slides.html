@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+
+<title>Some title...</title>
+
+<meta name="description" content="Some title...">    
+
+  <meta name="author" content="Anton Älgmyr, Jose Perez Hidalgo [sic, from group pdf]" />
+
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=4.0, user-scalable=no">
+
+<link rel="stylesheet" href="reveal.js/css/reveal.css">
+  <link rel="stylesheet" href="reveal.js/css/theme/solarized.css" id="theme">
+
+<link rel="stylesheet" href="custom.css">
+
+<!-- For syntax highlighting -->
+  <link rel="stylesheet" href="reveal.js/lib/css/zenburn.css">
+
+
+<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+<script>
+  document.write( '<link rel="stylesheet" href="reveal.js/css/print/' +
+    ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + 
+    '.css" type="text/css" media="print">' );
+</script>
+
+<!--[if lt IE 9]>
+<script src="reveal.js/lib/js/html5shiv.js"></script>
+<![endif]-->
+</head>
+
+<body>
+
+<div class="reveal">
+
+<!-- Any section element inside of this container is displayed as a slide -->
+<div class="slides">
+
+<section>
+<h1>Some title...</h1>
+<h3>Anton Älgmyr, Jose Perez Hidalgo [sic, from group pdf]</h3>
+<p>
+<h4>26 April 2017</h4>
+</p>
+</section>  
+
+
+<section><section id="history-lesson" class="titleslide slide level1"><h1>History lesson!</h1></section></section>
+<section><section id="current-examples" class="titleslide slide level1"><h1>Current examples</h1></section></section>
+<section><section id="dnns-quick-background" class="titleslide slide level1"><h1>DNNs: Quick background</h1></section><section id="primer-on-deep-neural-networks" class="slide level2">
+<h2>Primer on (deep) neural networks</h2>
+<ul>
+<li>Inspired by the brain, has large number of interconnected neurons</li>
+<li>Structure and strength of these connections determine behavior</li>
+<li><em>Deep</em> means the network has a large number of <em>layers</em> of neurons</li>
+<li>Highly expressive, great performance on recognition tasks</li>
+<li>General purpose structure trained for a specific task</li>
+</ul>
+<figure>
+<img src="img/Net.png" class="plain" />
+</figure>
+</section><section id="sounds-good-whats-the-problem" class="slide level2">
+<h2>Sounds good, what's the problem?</h2>
+<ul>
+<li><p>Expressiveness bring not only positives</p></li>
+<li><p>State space is huge, sparse knowledge of what a network actually does</p></li>
+<li><p>Turns out that this is useful for fooling a neural network</p></li>
+</ul>
+</section></section>
+<section><section id="false-negatives" class="titleslide slide level1"><h1>False negatives</h1></section><section id="intriguing-properties-of-neural-networks" class="slide level2">
+<h2>“Intriguing properties of neural networks”</h2>
+<p>Szegedy et al <span class="citation" data-cites="szegedy">[1]</span> showed that</p>
+<ul>
+<li><p>Small pertubations on an recognized image yields misclassifications</p></li>
+<li><p>Hardly perceptible change to a human</p></li>
+<li><p>The pertubations turned out to <em>not</em> be specific to the training set used</p></li>
+<li><p>Rather invariant to hyperparameters and the chosen subset of training data</p></li>
+</ul>
+</section><section id="adversarial-examples" class="slide level2">
+<h2>Adversarial examples</h2>
+<ul>
+<li><p>Examples was generated (optimized) for a number of networks</p>
+<ul>
+<li><p>AlexNet (supervised, multi-class image classifier)</p></li>
+<li><p>QuocNet (unsupervised, used as a binary classifier)</p></li>
+<li><p>Simple fully connected network (supervised, MNIST)</p></li>
+<li><p>Classifier+autoencoder (MNIST)</p></li>
+</ul></li>
+</ul>
+</section><section id="alexnet-multi-class-classifier" class="slide level2">
+<h2>AlexNet (multi-class classifier)</h2>
+<p>Image sets: original, enhanced difference and changed image</p>
+<p><img src="img/negative1.png" alt="ostriches1" height="350" /> <img src="img/negative2.png" alt="ostriches2" height="350" /></p>
+</section><section id="quocnet-binary-car-classifier" class="slide level2">
+<h2>Quocnet (binary car classifier)</h2>
+<p>Image sets: orignal, changed image and enhanced difference <img src="img/quocnet_distorted1.png" alt="quoc1" height="175" /> <img src="img/quocnet_distorted2.png" alt="quoc2" height="175" /></p>
+</section><section id="mnist-fc-and-ae" class="slide level2">
+<h2>MNIST (FC and AE)</h2>
+<p>Adversial examples, 0% accuracy</p>
+<p><img src="img/ce_200-200-10.png" height="150" /> <img src="img/ce_softmax.png" height="150" /></p>
+<p>Added gaussian noise, 51% accuracy</p>
+<figure>
+<img src="img/ce_random.png" height="150" />
+</figure>
+</section><section id="conclusion" class="slide level2">
+<h2>Conclusion</h2>
+<p>We can create images easily recognizable by a human that is foreign to a neural network.</p>
+</section></section>
+<section><section id="false-positives" class="titleslide slide level1"><h1>False positives</h1></section><section id="deep-neural-networks-are-easily-fooled-high-confidence-predictions-for-unrecognizable-images" class="level3">
+<h3>“Deep Neural Networks are Easily Fooled:<br> High Confidence Predictions for Unrecognizable Images”</h3>
+<p>Nguyen, Yosinski and Clune <span class="citation" data-cites="nguyen">[2]</span></p>
+<ul>
+<li><p>Investigated another difference between DNN and human vision</p></li>
+<li><p>Looked at networks trained on the ImageNet and MNIST datasets</p></li>
+<li><p>Optimized adversarial exemples using evolutionary algorithms or gradient ascent</p></li>
+<li><p>Direct (pixelwise) and indirect (feature based, CPPN) encoding</p></li>
+</ul>
+</section><section id="mnist-handwritten-digit-database-lenet" class="slide level2">
+<h2>MNIST handwritten digit database (LeNet)</h2>
+<div class="left">
+<p>EA, direct encoding<br>(99.99% certainty)</p>
+<figure>
+<img src="img/1412/whitenoise_lenet_images_5_runs.pdf.png" height="200" />
+</figure>
+</div>
+<div class="right">
+<p>EA, indirect encoding<br>(99.99% certainty)</p>
+<figure>
+<img src="img/1412/mnist_images_5_runs.pdf.png" height="200" />
+</figure>
+</div>
+</section><section id="imagenet-evolutionary-algorithm" class="slide level2">
+<h2>ImageNet: Evolutionary Algorithm</h2>
+<div class="left">
+<ul>
+<li><p>Direct encoding not successful over all classes</p></li>
+<li><p>The ones with high confidence are at large indescernible</p></li>
+<li>Indirect encoding was effective and many examples are nonsensical to humans</li>
+</ul>
+</div>
+<div class="right">
+<figure>
+<img src="img/1412/imagenet_16_images_1.jpg" height="450" />
+</figure>
+</div>
+</section><section id="imagenet-gradient-ascent" class="slide level2">
+<h2>ImageNet: Gradient Ascent</h2>
+<ul>
+<li>Very different results, still hard to identify by humans</li>
+<li>Interestingly, knowing the class you can identify details</li>
+</ul>
+<figure>
+<img src="img/1412/gradient_descent_nodecay_less.jpg" height="360" />
+</figure>
+</section><section id="conclusion-1" class="slide level2">
+<h2>Conclusion</h2>
+<p>We can create images easily recognizable by a neural network that is foreign to a human.</p>
+</section></section>
+<section><section id="so-why-does-this-matter" class="titleslide slide level1"><h1>So, why does this matter?</h1></section><section id="insights" class="slide level2">
+<h2>Insights</h2>
+<ul>
+<li><p>DNN and humans see things differently</p></li>
+<li><p>These kinds of studies helps to concretize this</p></li>
+<li><p>Another way of understanding how DNNs behave</p></li>
+</ul>
+</section><section id="improvements" class="slide level2">
+<h2>Improvements</h2>
+<ul>
+<li><p>Insights about DNNs lead to new methods to combat adversarial examples</p></li>
+<li><p>Has lead to numerous papers, e.g. <span class="citation" data-cites="fawsi">[3]</span> <span class="citation" data-cites="papernot">[4]</span> <span class="citation" data-cites="papernot2">[5]</span> <span class="citation" data-cites="goodfellow">[6]</span></p></li>
+<li><p>Will likely lead to long time improvement of DNNs</p></li>
+</ul>
+</section></section>
+<section><section id="summary" class="slide level2">
+<h2>Summary</h2>
+<p>We said stuff, some of which could be interesting to highlight.</p>
+</section><section id="thank-you-for-listening" class="slide level2">
+<h2>Thank you for listening!</h2>
+</section><section id="references" class="slide level2 unnumbered">
+<h2>References</h2>
+<div id="refs" class="references">
+<div id="ref-szegedy">
+<p>[1] C. Szegedy, W. Zaremba, I. Sutskever, J. Bruna, D. Erhan, I. J. Goodfellow, and R. Fergus, “Intriguing properties of neural networks,” <em>CoRR</em>, 2013.</p>
+</div>
+<div id="ref-nguyen">
+<p>[2] A. M. Nguyen, J. Yosinski, and J. Clune, “Deep neural networks are easily fooled: High confidence predictions for unrecognizable images,” <em>CoRR</em>, 2014.</p>
+</div>
+<div id="ref-fawsi">
+<p>[3] A. Fawzi, O. Fawzi, and P. Frossard, “Analysis of classifiers’ robustness to adversarial perturbations,” <em>CoRR</em>, 2015.</p>
+</div>
+<div id="ref-papernot">
+<p>[4] N. Papernot, P. McDaniel, S. Jha, M. Fredrikson, Z. B. Celik, and A. Swami, “The limitations of deep learning in adversarial settings,” in <em>2016 ieee european symposium on security and privacy (euros p)</em>, 2016, pp. 372–387.</p>
+</div>
+<div id="ref-papernot2">
+<p>[5] N. Papernot, P. McDaniel, X. Wu, S. Jha, and A. Swami, “Distillation as a defense to adversarial perturbations against deep neural networks,” in <em>2016 ieee symposium on security and privacy (sp)</em>, 2016, pp. 582–597.</p>
+</div>
+<div id="ref-goodfellow">
+<p>[6] I. J. Goodfellow, J. Shlens, and C. Szegedy, “Explaining and harnessing adversarial examples,” <em>CoRR</em>, 2014.</p>
+</div>
+</div>
+</section></section>
+</div>
+
+<script src="reveal.js/lib/js/head.min.js"></script>
+<script src="reveal.js/js/reveal.js"></script>
+
+<script>
+  // Full list of configuration options available here:
+  // https://github.com/hakimel/reveal.js#configuration
+  Reveal.initialize({
+    controls: true,
+    progress: false,
+    history: true,
+    center: true,
+
+    width: 800,
+    height: 600,
+
+    margin: 0.1,
+
+    minScale: 0.2,
+    maxScale: 1.5,
+//    width: "100%",
+//    height: "100%",
+//    margin: 0,
+//    minScale: 1,
+//    maxScale: 1,
+
+  // available themes are in reveal.js/css/theme
+      theme: Reveal.getQueryHash().theme || 'solarized', 
+    // default/cube/page/concave/zoom/linear/fade/none
+      transition: Reveal.getQueryHash().transition || 'slide',
+    // Optional libraries used to extend on reveal.js
+  dependencies: [
+    { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+    { src: 'reveal.js/plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+    { src: 'reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+    { src: 'reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+    { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+    { src: 'reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+    // { src: 'reveal.js/plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+  ]
+  });
+</script>
+
+</body>
+</html>
