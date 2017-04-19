@@ -1,10 +1,46 @@
 % Some title...
-% Anton Älgmyr, Jose Perez Hidalgo [sic, from group pdf]
+% What AI's can't do, criticism throughout history and present issues
+% Anton Älgmyr, J. Esteban Pérez-Hidalgo [sic, from group pdf]
 % 26 April 2017
 
 # History lesson!
 
+# Early Approach on AI: Back to the 60's
 
+## Good Old Fashioned Artificial Intelligence (GOFAI)
+
+	* Symbolic AI: all knowledge and actions can be expressed in terms of
+
+## Early Expectations for the following 10 years:
+
+	- A digital computer would... 
+	* ...be the world's chess champion.
+	* ...compose music that had considerable aesthetic value
+	* ...discover and prove an important mathematical theorem
+	* Theories in psychology will take the form of a computer program
+
+## Counterpart: What Computers can't do. Hubert Dreyfus' views on AI research
+	
+	* Alchemy and Artificial Intelligence (1965)
+	* What Computers Can't Do; A Critique of Artificial Reason (1972)	 
+
+## Wrong assumptions of AI researchers
+	* Biological assumption
+	* Psychological assumption
+	* Epistemological assumption
+	* Ontological assumption
+
+# Modern approach: 90's till nowadays
+
+## Probabilistic and statistical methods
+
+	* Big data
+	* Machine learning
+	* Neural networks
+
+## Today's critism
+
+	* 
 
 # Current examples
 
