@@ -1,57 +1,68 @@
-% Some title...
-% What AI's can't do, criticism throughout history and present issues
-% Anton Älgmyr, J. Esteban Pérez-Hidalgo [sic, from group pdf]
-% 26 April 2017
+% What AIs Can't Do
+% Criticism Throughout History and Present Issues
+% Anton Älgmyr,	J. Esteban Pérez-Hidalgo <br> 26 April 2017
 
-# History lesson!
-
-# Early Approach on AI: Back to the 60's
+# Early approach on AI:<br>Back to the 60s
 
 ## Good Old Fashioned Artificial Intelligence (GOFAI)
 
-	* Symbolic AI: all knowledge and actions can be expressed in terms of
+* Symbolic AI: all knowledge and actions can be expressed in terms of
 
 ## Early Expectations for the following 10 years:
 
-	- A digital computer would... 
-	* ...be the world's chess champion.
-	* ...compose music that had considerable aesthetic value
-	* ...discover and prove an important mathematical theorem
-	* Theories in psychology will take the form of a computer program
+- A digital computer would... 
 
-## Counterpart: What Computers can't do. Hubert Dreyfus' views on AI research
+	* ...be the world's chess champion.
+
+    * ...compose music that had considerable aesthetic value
 	
-	* Alchemy and Artificial Intelligence (1965)
-	* What Computers Can't Do; A Critique of Artificial Reason (1972)	 
+    * ...discover and prove an important mathematical theorem
+
+- Theories in psychology will take the form of a computer program
+
+## Counterpart: What computers can't do,<br>Hubert Dreyfus' views on AI research
+	
+* Alchemy and Artificial Intelligence (1965)
+
+* What Computers Can't Do; A Critique of Artificial Reason (1972)	 
 
 ## Wrong assumptions of AI researchers
-	* Biological assumption
-	* Psychological assumption
-	* Epistemological assumption
-	* Ontological assumption
 
-# Modern approach: 90's till nowadays
+* Biological assumption
+
+* Psychological assumption
+
+* Epistemological assumption
+
+* Ontological assumption
+
+# Modern approach:<br>90s till nowadays
 
 ## Probabilistic and statistical methods
 
-	* Big data
-	* Machine learning
-	* Neural networks
+* Big data
+
+* Machine learning
+
+* Neural networks
 
 ## Today's critism
 
 	* 
 
-# Current examples
+# A modern case study,<br>fooling neural networks
 
-# DNNs: Quick background
-
-## Primer on (deep) neural networks
+## Quick primer on (deep) neural networks
 
 * Inspired by the brain, has large number of interconnected neurons
+
+
 * Structure and strength of these connections determine behavior
+
 * *Deep* means the network has a large number of _layers_ of neurons
+
 * Highly expressive, great performance on recognition tasks
+
 * General purpose structure trained for a specific task
 
 ![](img/Net.png){.plain}
@@ -60,14 +71,14 @@
 
 * Expressiveness bring not only positives
 
-* State space is huge, sparse knowledge of what a network actually does
+* State space is huge, sparse knowledge of what the internals of a network actually does
 
 * Turns out that this is useful for fooling a neural network
+
 
 # False negatives
 
 ## “Intriguing properties of neural networks”
-
 Szegedy et al [@szegedy] showed that
 
 * Small pertubations on an recognized image yields misclassifications
@@ -90,22 +101,7 @@ Szegedy et al [@szegedy] showed that
 
     - Classifier+autoencoder (MNIST)
 
-
-## AlexNet (multi-class classifier)
-
-Image sets: original, enhanced difference and changed image
-
-![ostriches1](img/negative1.png){height=350}
-![ostriches2](img/negative2.png){height=350}
-
-## Quocnet (binary car classifier)
-
-Image sets: orignal, changed image and enhanced difference
-![quoc1](img/quocnet_distorted1.png){height=175}
-![quoc2](img/quocnet_distorted2.png){height=175}
-
-## MNIST (FC and AE)
-
+## MNIST
 Adversial examples, 0% accuracy
 
 ![](img/ce_200-200-10.png){height=150}
@@ -115,8 +111,22 @@ Added gaussian noise, 51% accuracy
 
 ![](img/ce_random.png){height=150}
 
+
+## Binary car classifier (QuocNet)
+Image sets: orignal, changed image and enhanced difference
+![quoc1](img/quocnet_distorted1.png){height=175}
+![quoc2](img/quocnet_distorted2.png){height=175}
+
+
+## Multi-class classifier (AlexNet)
+Image sets: original, enhanced difference and changed image
+
+![ostriches1](img/negative1.png){height=350}
+![ostriches2](img/negative2.png){height=350}
+
+
 ## Conclusion
-We can create images easily recognizable by a human that is foreign to a neural network.
+We can create images easily recognizable by a human<br>that is foreign to a neural network.
 
 
 # False positives
@@ -133,7 +143,6 @@ Nguyen, Yosinski and Clune [@nguyen]
 * Direct (pixelwise) and indirect (feature based, CPPN) encoding
 
 ## MNIST handwritten digit database (LeNet)
-
 <div class=left>
 EA, direct encoding<br>(99.99% certainty)
 
@@ -147,7 +156,6 @@ EA, indirect encoding<br>(99.99% certainty)
 </div>
 
 ## ImageNet: Evolutionary Algorithm
-
 <div class=left>
 * Direct encoding not successful over all classes
 
@@ -162,6 +170,7 @@ EA, indirect encoding<br>(99.99% certainty)
 ## ImageNet: Gradient Ascent
 
 * Very different results, still hard to identify by humans
+
 * Interestingly, knowing the class you can identify details
 
 ![](img/1412/gradient_descent_nodecay_less.jpg){height=360}
@@ -169,29 +178,33 @@ EA, indirect encoding<br>(99.99% certainty)
 ## Conclusion
 We can create images easily recognizable by a neural network that is foreign to a human.
 
-# So, why does this matter?
+# So, why all the pessimism?<br><span class="fragment" data-fragment-index="0">Because it's a subject we care about.</span>
 
-## Insights
+## Hype is not all good
+
+* Uncritical optimism is inspiring, but leads to unrealistic expectations
+
+* Rigorous critisism can hint at what subjects are worth pursuing
+
+* Could also spur technical innovation to prove the critisism wrong
+
+## Case study: Insights
 
 * DNN and humans see things differently
 
-* These kinds of studies helps to concretize this
+* The two papers mentioned here helps to concretize this
 
-* Another way of understanding how DNNs behave
+* Gives another way of understanding how DNNs behave
 
-## Improvements
+## Case study: Improvements
 
-* Insights about DNNs lead to new methods to combat adversarial examples
+* These insights has lead to methods to combat adversarial examples
 
 * Has lead to numerous papers, e.g. [@fawsi] [@papernot] [@papernot2] [@goodfellow]
 
 * Will likely lead to long time improvement of DNNs
 
 #
-
-## Summary
-We said stuff, some of which could be interesting to highlight.
-
 ## Thank you for listening!
 
 ## References
