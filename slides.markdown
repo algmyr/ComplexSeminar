@@ -6,19 +6,19 @@
 
 ## Good Old Fashioned Artificial Intelligence (GOFAI)
 
-* Symbolic AI: all knowledge and actions can be expressed in terms of
+* Physical Symbolic Systems: All knowledge and actions can be expressed in terms of patterns of symbols that can be manipulated and combined to produce new expressions
 
 ## Early Expectations for the following 10 years:
 
 - A digital computer would... 
 
-	* ...be the world's chess champion.
+* ...be the world's chess champion.
 
-    * ...compose music that had considerable aesthetic value
+* ...compose music that had considerable aesthetic value
 	
-    * ...discover and prove an important mathematical theorem
+* ...discover and prove an important mathematical theorem
 
-- Theories in psychology will take the form of a computer program
+* Theories in psychology will take the form of a computer program
 
 ## Counterpart: What computers can't do,<br>Hubert Dreyfus' views on AI research
 	
@@ -36,6 +36,14 @@
 
 * Ontological assumption
 
+## The Chinese room argument
+
+* Intelligence lies on the meaning
+
+## Embodied cognition
+
+* A challenge to the Cartesian dualism
+
 # Modern approach:<br>90s till nowadays
 
 ## Probabilistic and statistical methods
@@ -44,11 +52,12 @@
 
 * Machine learning
 
-* Neural networks
-
 ## Today's critism
 
-	* 
+* Modern methods exploit the improvement on computer performance
+
+* AI field is still attached to reductionism and concieve a mind separated from the body
+
 
 # A modern case study,<br>fooling neural networks
 
