@@ -238,17 +238,9 @@ We can create images easily recognizable by a neural network that is foreign to 
 <div id="qs">
 * Optical illusions can be thought of as causing false positives when inputed to the human neural network. Are these images equivalent to the false positives of the ANN? If so what does it tell us about the ANN? If not, what is the difference?
 
-* The two parts of this presentation relate to different areas of research in AI: general purpose super-intelligence and task specific problem solving. 
-In the case of the first interpretation, to understand what is the goal of such research we need to have a working definition of 'intelligence'. Can you come up with one? 
-One aspect that is generally not considered is perception. How does an AI need to relate to the world?
+* The two parts of this presentation relate to different areas of research in AI: general purpose super-intelligence and task specific problem solving. In the case of the first interpretation, to understand what is the goal of such research we need to have a working definition of 'intelligence'. Can you come up with one? One aspect that is generally not considered is perception. How does an AI need to relate to the world?
 
-* Using this working definition, can you answer Dreyfus and show that you are not making the assumptions he points out:
-- Biological
-- Psychological
-- Epistemological
-- Ontological
-- Mind-body separation
-- Reductionism
+* Using this working definition, can you answer Dreyfus and show that you are not making the assumptions he points out: biological, psychological, epistemological, ontological, mind-body separation, reductionism.
 
-* As you have seen from the presentation, adversarial examples challenge Deep Learning systems that we do not yet understand. What is your opinion on the topic on how should we represent knowledge, and optimize mathematical models on? What is your opinion about using the new technology that we do not yet understand, and produce commercial applications of it?
+* As you have seen from the presentation, adversarial examples challenge Deep Learning systems that we do not yet understand. What is your opinion on how should we represent knowledge, and optimize mathematical models on? What is your opinion about using new technology that we do not yet understand, and produce commercial applications of it?
 </div>
