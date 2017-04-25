@@ -43,7 +43,7 @@
 
 ## Ontological assumption
 
-* All the existing knowledge can be formalized as a set determinated set of elements.
+* All the existing knowledge can be formalized as a set determined set of elements.
 
 ## The Chinese room argument
 
@@ -244,3 +244,17 @@ We can create images easily recognizable by a neural network that is foreign to 
 
 * As you have seen from the presentation, adversarial examples challenge Deep Learning systems that we do not yet understand. What is your opinion on how should we represent knowledge, and optimize mathematical models on? What is your opinion about using new technology that we do not yet understand, and produce commercial applications of it?
 </div>
+
+## Summary of concepts...
+
+* Biological assumption: On/off switches of a computer are comparable to actions of neurons
+
+* Psychological assumption: Information processing relates to the procecess of human cognition
+
+* Epistemological assumption: Actions and knowledge can be represented in a formal way. This formalism can be used to reproduce the phenomena
+
+* Ontological assumption: All the existing knowledge can be formalized as a set determined set of elements
+
+* Mind-body separation: Postulate made by Descartes, mind and body as separated entities.
+
+* Reductionism: Scientific attempt to provide explanation in terms of ever smaller entities
