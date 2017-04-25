@@ -10,7 +10,7 @@
 
 ## Early Expectations for the following 10 years:
 
-- A digital computer would... 
+A digital computer would... 
 
 * ...be the world's chess champion.
 
@@ -27,6 +27,8 @@
 * What Computers Can't Do; A Critique of Artificial Reason (1972)	 
 
 ## Wrong assumptions of AI researchers
+
+* AI was obsolete from its foundation
 
 ## Biological assumption
 
@@ -51,7 +53,7 @@
 
 ## Embodied cognition
 
-* 
+* Cognition is shaped by aspects of the entire body of the organism
 * A challenge to the Cartesian dualism
 
 # Modern approach:<br>90s till nowadays
@@ -62,12 +64,16 @@
 
 * Machine learning
 
-## Today's critism
+## Today's criticism
 
 * Modern methods exploit the improvement on computer performance
 
 * AI field is still attached to reductionism and concieve a mind separated from the body
 
+* Neural networks are black boxes
+
+## Do old assumptions still hold?
+* What's the goal of the development of an artificial *intelligence*?
 
 # A modern case study,<br>fooling neural networks
 
