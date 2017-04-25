@@ -90,7 +90,9 @@
 ## “Intriguing properties of neural networks”
 Szegedy et al [@szegedy] showed that
 
-* Small pertubations on an recognized image yields misclassifications
+* Created examples identifiable by humans but not by the network
+
+* Small pertubations on a recognized image yields misclassifications
 
 * Hardly perceptible change to a human
 
@@ -100,7 +102,7 @@ Szegedy et al [@szegedy] showed that
 
 ## Adversarial examples
 
-* Examples was generated (optimized) for a number of networks
+* Examples was generated (optimized through gradiend ascent) for a number of networks
 
     - AlexNet (supervised, multi-class image classifier)
 
@@ -144,6 +146,8 @@ We can create images easily recognizable by a human<br>that is foreign to a neur
 Nguyen, Yosinski and Clune [@nguyen]
 
 * Investigated another difference between DNN and human vision
+
+* Created examples identifiable by humans but not by the network
 
 * Looked at networks trained on the ImageNet and MNIST datasets
 
@@ -217,3 +221,18 @@ We can create images easily recognizable by a neural network that is foreign to 
 ## Thank you for listening!
 
 ## References
+<div id="refs"></div>
+
+## Questions
+
+<div id="qs">
+* Optical illusions can be thought of as causing false positives when inputed to the human neural network. Are these images equivalent to the false positives of the ANN? If so what does it tell us about the ANN? If not, what is the difference?
+
+* The two parts of this presentation relate to different areas of research in AI: general purpose super-intelligence and task specific problem solving. 
+In the case of the first interpretation, to understand what is the goal of such research we need to have a working definition of 'intelligence'. Can you come up with one? 
+One aspect that is generally not considered is perception. How does an AI need to relate to the world?
+
+* The two parts of this presentation relate to different areas of research in AI: general purpose super-intelligence and task specific problem solving. 
+In the case of the first interpretation, to understand what is the goal of such research we need to have a working definition of 'intelligence'. Can you come up with one? 
+One aspect that is generally not considered is perception. How does an AI need to relate to the world?
+</div>
