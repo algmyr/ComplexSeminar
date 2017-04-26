@@ -32,11 +32,11 @@ A digital computer would...
 
 ## Biological assumption
 
-* On/off switches of a computer are comparable to actions of neurons
+* On/Off switches of a computer are comparable to actions of neurons
 
 ## Psychological assumption
 
-* Information processing relates to the procecess of human cognition
+* Information processing relates to the processes of human cognition
 
 ## Epistemological assumption
 
