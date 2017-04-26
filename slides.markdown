@@ -36,7 +36,7 @@ A digital computer would...
 
 ## Psychological assumption
 
-* Information processing relates to the procecess of human cognition
+* Information processing relates to the processes of human cognition
 
 ## Epistemological assumption
 
@@ -98,15 +98,13 @@ A digital computer would...
 
 * State space is huge, sparse knowledge of what the internals of a network actually does
 
-* Turns out that this is useful for fooling a neural network
+* Turns out that these facts are useful for fooling a neural network
 
 
-# False negatives
+# Computer vision:<br>False negatives
 
 ## “Intriguing properties of neural networks”
 Szegedy et al [@szegedy] showed that
-
-* Created examples identifiable by humans but not by the network
 
 * Small pertubations on a recognized image yields misclassifications
 
@@ -148,22 +146,24 @@ Image sets: orignal, changed image and enhanced difference
 ## Multi-class classifier (AlexNet)
 Image sets: original, enhanced difference and changed image
 
+<div>
 ![ostriches1](img/negative1.png){height=350}
 ![ostriches2](img/negative2.png){height=350}
-
+</div>
+<div id=ostrich class="fragment" data-fragment-index="0">
+![](img/ostrich.jpg){width=400}
+</div>
 
 ## Conclusion
-We can create images easily recognizable by a human<br>that is foreign to a neural network.
+We can create images *easily recognizable* by a human<br>that is *foreign* to a neural network.
 
 
-# False positives
+# Computer vision:<br>False positives
 
 ### “Deep Neural Networks are Easily Fooled:<br> High Confidence Predictions for Unrecognizable Images”
 Nguyen, Yosinski and Clune [@nguyen]
 
 * Investigated another difference between DNN and human vision
-
-* Created examples identifiable by humans but not by the network
 
 * Looked at networks trained on the ImageNet and MNIST datasets
 
@@ -205,7 +205,7 @@ EA, indirect encoding<br>(99.99% certainty)
 ![](img/1412/gradient_descent_nodecay_less.jpg){height=360}
 
 ## Conclusion
-We can create images easily recognizable by a neural network that is foreign to a human.
+We can create images *easily recognizable* by a neural network<br>that is *foreign* to a human.
 
 # So, why all the pessimism?<br><span class="fragment" data-fragment-index="0">Because it's a subject we care about.</span>
 
@@ -233,8 +233,17 @@ We can create images easily recognizable by a neural network that is foreign to 
 
 * Will likely lead to long time improvement of DNNs
 
-#
-## Thank you for listening!
+## Summary
+Human like AI
+: has faced harsh critisism and has fundamental issues, including the assumptions highlighted by Dreyfus
+
+AI as a tool
+: does not make the same assumptions but still has substantial issues, in part because we don't really know the inner workings of the tool
+
+Critisism
+: can be a driving force of understanding and innovation by highlighting problems while uncritical praise tend to downplay or ignore problems
+
+# Thank you for listening!
 
 ## References
 <div id="refs"></div>
@@ -242,25 +251,33 @@ We can create images easily recognizable by a neural network that is foreign to 
 ## Questions
 
 <div id="qs">
-* Optical illusions can be thought of as causing false positives when inputed to the human neural network. Are these images equivalent to the false positives of the ANN? If so what does it tell us about the ANN? If not, what is the difference?
-
-* The two parts of this presentation relate to different areas of research in AI: general purpose super-intelligence and task specific problem solving. In the case of the first interpretation, to understand what is the goal of such research we need to have a working definition of 'intelligence'. Can you come up with one? One aspect that is generally not considered is perception. How does an AI need to relate to the world?
-
-* Using this working definition, can you answer Dreyfus and show that you are not making the assumptions he points out: biological, psychological, epistemological, ontological, mind-body separation, reductionism.
-
-* As you have seen from the presentation, adversarial examples challenge Deep Learning systems that we do not yet understand. What is your opinion on how should we represent knowledge, and optimize mathematical models on? What is your opinion about using new technology that we do not yet understand, and produce commercial applications of it?
+* Optical illusions can be thought of as causing false positives when inputed to the human neural network. *Are these images equivalent to the false positives of the ANN? If so what does it tell us about the ANN? If not, what is the difference?*
+<hr>
+* The two parts of this presentation relate to different areas of research in AI: general purpose super-intelligence and task specific problem solving. In the case of the first interpretation, to understand what is the goal of such research we need to have a working definition of 'intelligence'. *Can you come up with one?* One aspect that is generally not considered is perception. *How does an AI need to relate to the world?*
+<hr>
+* *Using this working definition, can you answer Dreyfus and show that you are not making the assumptions he points out: biological, psychological, epistemological, ontological, mind-body separation, reductionism?*
+<hr>
+* A common approach to machine learning is representation learning, which takes a set of features of the dataset and optimize a model to describe it. Deep learning is an end to end model that does both feature extraction and representation learning given raw data. While highly successful, we strictly don't know why/how this works.<br>*In the light of shown adversarial examples, do you think deep learning is a reasonable strategy? What's your opinion of using tech that we still don't understand in applications?*
 </div>
 
 ## Summary of concepts...
 
-* Biological assumption: On/off switches of a computer are comparable to actions of neurons
+<div style="font-size: 0.9em">
+Biological assumption
+: On/off switches of a computer are comparable to actions of neurons
 
-* Psychological assumption: Information processing relates to the procecess of human cognition
+Psychological assumption
+: Information processing relates to the procecess of human cognition
 
-* Epistemological assumption: Actions and knowledge can be represented in a formal way. This formalism can be used to reproduce the phenomena
+Epistemological assumption
+: Actions and knowledge can be represented in a formal way. This formalism can be used to reproduce the phenomena
 
-* Ontological assumption: All the existing knowledge can be formalized as a set determined set of elements
+Ontological assumption
+: All the existing knowledge can be formalized as a set determined set of elements
 
-* Mind-body separation: Postulate made by Descartes, mind and body as separated entities.
+Mind-body separation
+: Postulate made by Descartes, mind and body as separated entities.
 
-* Reductionism: Scientific attempt to provide explanation in terms of ever smaller entities
+Reductionism
+: Scientific attempt to provide explanation in terms of ever smaller entities
+</div>
