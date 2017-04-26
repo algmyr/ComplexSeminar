@@ -32,7 +32,7 @@ A digital computer would...
 
 ## Biological assumption
 
-* On/off switches of a computer are comparable to actions of neurons
+* On/Off switches of a computer are comparable to actions of neurons
 
 ## Psychological assumption
 
